@@ -35,3 +35,8 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
+
+if ENV['RAILS_ENV'] != 'production'
+    require "dotenv"
+    Dotenv.load("/.env")
+end

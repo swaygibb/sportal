@@ -34,5 +34,8 @@ module Sportal
     config.debug_exception_response_format = :api
     config.eager_load_paths += %W(#{config.root}/app/helpers)
     config.eager_load_paths += %W(#{config.root}/app/services)
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
   end
 end

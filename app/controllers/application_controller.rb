@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::API
-    include UserinfoHelper
+    $spotify_token = ""
+    $spotify_code = ""
 end
