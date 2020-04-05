@@ -32,5 +32,7 @@ module Sportal
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.debug_exception_response_format = :api
+    config.eager_load_paths += %W(#{config.root}/app/helpers)
+    config.eager_load_paths += %W(#{config.root}/app/services)
   end
 end
