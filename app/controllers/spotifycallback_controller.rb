@@ -7,6 +7,6 @@ class SpotifycallbackController < ApplicationController
         $spotify_code = params[:code]
         session[:spotify_code] = $spotify_code
         
-        redirect_to "/userinfo"
+        redirect_to "/#{session[:last_url]}"
     end
 end

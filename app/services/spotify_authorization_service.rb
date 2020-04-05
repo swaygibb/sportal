@@ -19,7 +19,6 @@ class SpotifyAuthorizationService
         response = http.request(request)
 
         response_body = JSON.parse response.read_body
-        Rails.logger.debug response_body
         if response.code == "200"
             $spotify_token = response_body["access_token"]
             session[:spotify_token] = $spotify_token

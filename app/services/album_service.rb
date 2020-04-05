@@ -1,11 +1,11 @@
 require 'net/http'
 require 'json'
 require 'base64'
-require "uri"
+require 'uri'
 
-class UserinfoService
+class AlbumService
     def get(session)
-        url = URI(ENV['SPOTIFY_USER_PROFILE_URL'])
+        url = URI(ENV['SPOTIFY_ALBUM_URL'])
 
         https = Net::HTTP.new(url.host, url.port);
         https.use_ssl = true
