@@ -5,7 +5,6 @@ require "uri"
 
 class SpotifyAuthorizationService
     def authorize(session)
-
         url = URI(ENV['SPOTIFY_AUTHORIZATION_URL'])
         basic_token = Base64.strict_encode64("#{ENV['SPOTIFY_CLIENT_ID']}:#{ENV['SPOTIFY_CLIENT_SECRET']}")
 

@@ -2,7 +2,7 @@ require 'cgi'
 
 class SpotifycallbackController < ApplicationController
 
-    # GET /authorize
+    # GET /spotifycallback
     def index
         $spotify_code = params[:code]
         session[:spotify_code] = $spotify_code
